@@ -19,14 +19,14 @@ Simple python web-service for compute checksum files by URL
 ---
 Примеры запросов.
 Размещение новой задачи на расчет контрольной суммы (параметр email опциональный):
-> curl -X POST "http://localhost:5000/submit?url=https://speed.hetzner.de/100MB.bin&email=mymail@mail.com"
+curl -X POST "http://localhost:5000/submit?url=https://speed.hetzner.de/100MB.bin&email=mymail@mail.com"
 Ответ: {"id" : 1}
 Запрос результатов во время загрузки:
-> curl -X GET "http://localhost:5000/check?id=1"
+curl -X GET "http://localhost:5000/check?id=1"
 Ответ: {"status" : "running"}
 Запрос результатов по завершению загрузки и расчета:
-> curl -X GET "http://localhost:5000/check?id=1"
+curl -X GET "http://localhost:5000/check?id=1"
 Ответ: {"task":{"id":1,"md5":"2f282b84e7e608d5852449ed940bfc51","status":"done","url":"https://speed.hetzner.de/100MB.bin"}}
 Запрос результата задачи с несуществующим id:
-> curl -X GET "http://localhost:5000/check?id=1000"
+curl -X GET "http://localhost:5000/check?id=1000"
 Ответ: {"status" : "doesnt exist"}
