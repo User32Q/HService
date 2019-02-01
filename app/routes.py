@@ -44,7 +44,7 @@ def upload(task, email):
 		smtpObj.starttls()
 		smtpObj.login(gmail_user, gmail_password)
 		message = 'URL: ' + task['url'] + '\n' + 'MD5: ' + task['md5']
-		smtpObj.sendmail("deadkingser@gmail.com", email, message)
+		smtpObj.sendmail(gmail_user, email, message)
 		smtpObj.quit()
 		
 def file_as_bytes(file):
