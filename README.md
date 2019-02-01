@@ -2,11 +2,11 @@
 Simple python web-service for compute checksum files by URL
 
 ## Инструкция по развертыванию в виртуальной среде (Windows 7).
-1) Создание каталога для проекта:
-	$ mkdir hservice
-	$ cd hservice
-2) Создание виртуальной среды:
-	$ python -m venv venv
+1) Создание каталога для проекта:  
+	$ mkdir hservice  
+	$ cd hservice  
+2) Создание виртуальной среды:  
+	$ python -m venv venv  
 3) Перенос папки app из репозитория в hservice
 4) Создание папки downloads в hservice
 5) Активация виртуальной среды:
